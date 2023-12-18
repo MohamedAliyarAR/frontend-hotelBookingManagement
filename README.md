@@ -1,8 +1,30 @@
-# React + Vite
+# Booking.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Hotel Booking Management web application built using MERN stack
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Set up](#set-up)
+- [Data Base](#database)
+- [Usage](#usage)
+- [Example](#example)
+
+
+## Installation
+
+1. Assuming you have installed npm and nodejs
+2. Clone the Front-end code
+
+```bash
+gh repo clone MohamedAliyarAR/frontend-hotelBookingManagement
+```
+2. Clone the Back-end code
+
+```bash
+gh repo clone MohamedAliyarAR/backend-hotelBookingManagement
+```
+
+
+3. Install MongoDB Compass.
+4. run <code>npm install</code> in both directory.

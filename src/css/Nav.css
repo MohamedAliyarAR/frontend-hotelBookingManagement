@@ -1,0 +1,14 @@
+nav{
+    background-color: #adf;
+    margin:2rem 2rem;
+    padding: 2%;
+    border-radius:20px ;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.link:hover{
+    color: black;
+}
+

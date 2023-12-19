@@ -8,8 +8,6 @@ A simple Hotel Booking Management web application built using MERN stack
 - [Set up](#set-up)
 - [Data Base](#database)
 - [Usage](#usage)
-- [Example](#example)
-
 
 ## Installation
 
@@ -27,4 +25,31 @@ gh repo clone MohamedAliyarAR/backend-hotelBookingManagement
 
 
 3. Install MongoDB Compass.
-4. run <code>npm install</code> in both directory.
+
+## Set up
+
+- run <code>npm install</code> in both directory.
+- to start the front-end run <code>npm run start</code>
+- to start the back-end run <code>node app.js</code>
+- Env var are <code>DBUSERNAME=your db name</code> <code>DBPASSWORD=your db password if any </code>
+
+## Database
+- The schema is located in db.js file
+- Create a new db and add it in the env var <code>DDBUSERNAME=your db name</code>
+- If there is no db password remove the var <code>password</code>
+
+
+## Usage 
+### Admin
+- Admin has to register as Admin
+- Admin can add room and manipulate the room created by the respective admin
+- A simple understanding interface is provided.
+
+### User
+- Use has to register as user
+- User can book room and vacate the room.
+- The datails of the user is shared to the admin.
+- The user can view images of the room.
+
+
+

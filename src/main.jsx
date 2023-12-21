@@ -10,11 +10,16 @@ import Register from "./pages/Register.jsx";
 import User from "./pages/User.jsx";
 import Admin from "./pages/Admin.jsx";
 import PrivateRoute from "./pages/PrivateRoute.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const router = Router([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
   {
     path: "/login",

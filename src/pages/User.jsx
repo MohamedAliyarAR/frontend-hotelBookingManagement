@@ -23,7 +23,7 @@ function Index() {
       }
     }
     getrooms();
-  });
+  }, []);
 
   return (
     <>

@@ -30,6 +30,7 @@ function Login() {
         `https://roombooking-fs1h.onrender.com/get${formData.usertype}`,
         formData
       );
+
       const token = response.data.auth;
 
       if (token) {

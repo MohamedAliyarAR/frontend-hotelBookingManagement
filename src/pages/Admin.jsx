@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import RoomForm from "../components/RoomForm";
 import LNav from "../components/LNav";
@@ -35,37 +35,29 @@ const Admin = () => {
     booked: false,
     bookedby: null,
   };
+
   const handleAddRoom = () => {
     setRooms([Data, ...rooms]);
   };
 
   const handleUpdateRoom = async (formData) => {
-    var c = 0;
-    rooms.map((room) => {
-      if (room.roomname == formData.roomname) {
-        c += 1;
-      }
-    });
-    if (c === 2) alert("already registered room name please change it");
-    else {
-      try {
-        await axios.post(
-          "https://roombooking-fs1h.onrender.com/updateroom",
-          formData
-        );
-        const response = await axios.post(
-          "https://roombooking-fs1h.onrender.com/getadminroom",
-          {
-            adminName: admin,
-          }
-        );
-        alert("updated successfully");
-        setRooms(response.data);
-        if (response.status == 500) alert("you can't update name");
-      } catch (error) {
-        if (error.status === 500) alert("you can't update name");
-        console.error("Error updating room:", error);
-      }
+    try {
+      await axios.post(
+        "https://roombooking-fs1h.onrender.com/updateroom",
+        formData
+      );
+      const response = await axios.post(
+        "https://roombooking-fs1h.onrender.com/getadminroom",
+        {
+          adminName: admin,
+        }
+      );
+      alert("updated successfully");
+      setRooms(response.data);
+      if (response.status == 500) alert("you can't update name");
+    } catch (error) {
+      if (error.status === 500) alert("you can't update name");
+      console.error("Error updating room:", error);
     }
   };
 
